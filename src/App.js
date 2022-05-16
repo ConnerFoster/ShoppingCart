@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import {Link} from 'react-router-dom'
+import background from './gpu.png'
+import {CgShoppingCart} from 'react-icons/cg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        height: '100vh',
+        width: '100vw',
+      }}
+      className='App'>
+      <div className='nav'>
+        <div>
+          <h1>RTX Store</h1>
+        </div>
+        <div className='nav-links'>
+          <Link
+            style={{
+              textDecoration: 'none',
+              color: 'white',
+              marginRight: '1rem',
+            }}
+            to='/products'>
+            Shop
+          </Link>
+          <Link
+            style={{
+              textDecoration: 'none',
+              color: 'white',
+              marginRight: '1rem',
+            }}
+            to='/contact'>
+            Contact
+          </Link>
+          <Link style={{color: 'white'}} to='/cart'>
+            <CgShoppingCart />
+          </Link>
+        </div>
+      </div>
+
+      <div className='shop-button'>
+        <Link to='/products'>
+          <button id='shop-btn'>Shop Now</button>
+        </Link>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
