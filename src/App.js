@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
-import background from './storewatches-hero.png'
-import {CgShoppingCart} from 'react-icons/cg'
+import background from './photos/gpu.jpg'
+import {Header} from './components/Header'
 
 function App() {
   return (
@@ -14,36 +14,11 @@ function App() {
         width: '100vw',
       }}
       className='App'>
-      <div className='nav'>
-        <div>
-          <h1>Fake Time</h1>
-        </div>
-        <div className='nav-links'>
-          <Link
-            style={{
-              textDecoration: 'none',
-              color: 'white',
-              marginRight: '1rem',
-            }}
-            to='/products'>
-            Shop
-          </Link>
-          <Link
-            style={{
-              textDecoration: 'none',
-              color: 'white',
-              marginRight: '1rem',
-            }}
-            to='/contact'>
-            Contact
-          </Link>
-          <Link style={{color: 'white'}} to='/cart'>
-            <CgShoppingCart />
-          </Link>
-        </div>
-      </div>
+      <Header />
 
       <div className='shop-button'>
+        <h1 id='home-main-text'>Nvidia GeForce RTX 3090 Ti</h1>
+        <h3 id='home-secondary-text'>Available Now</h3>
         <Link to='/products'>
           <button id='shop-btn'>Shop Now</button>
         </Link>
