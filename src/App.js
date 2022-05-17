@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import background from './gpu.png'
+import background from './storewatches-hero.png'
 import {CgShoppingCart} from 'react-icons/cg'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       className='App'>
       <div className='nav'>
         <div>
-          <h1>RTX Store</h1>
+          <h1>Fake Time</h1>
         </div>
         <div className='nav-links'>
           <Link
