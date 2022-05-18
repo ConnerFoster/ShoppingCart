@@ -3,6 +3,13 @@ import background from './photos/gpu.jpg'
 import {Header} from './components/Header'
 
 function App() {
+  const products = [
+    {
+      photo: './photos/rtx-3080.png',
+      title: 'RTX 3080',
+      price: '$499',
+    },
+  ]
   return (
     <div
       style={{
