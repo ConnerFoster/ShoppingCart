@@ -1,35 +1,39 @@
-import {Link} from 'react-router-dom'
+import {Link, Routes, Route} from 'react-router-dom'
+import Home from './routes/Home'
 import background from './photos/gpu.jpg'
 import {Header} from './components/Header'
+import ProductsPage from './routes/ProductsPage'
+import photo from './photos/rtx-3080.png'
 
 function App() {
   const products = [
     {
-      photo: './photos/rtx-3080.png',
-      title: 'RTX 3080',
+      photo: {photo},
+      title: 'RTX 3070',
       price: '$499',
     },
+    {
+      photo: '../photos/rtx-3080.png',
+      title: 'RTX 3080',
+      price: '$699',
+    },
+    {
+      photo: './photos/rtx-3080.png',
+      title: 'RTX 3090',
+      price: '$999',
+    },
   ]
-  return (
-    <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        height: '100vh',
-        width: '100vw',
-      }}
-      className='App'>
-      <Header />
 
-      <div className='shop-button'>
-        <h1 id='home-main-text'>Nvidia GeForce RTX 3090 Ti</h1>
-        <h3 id='home-secondary-text'>Available Now</h3>
-        <Link to='/products'>
-          <button id='shop-btn'>Shop Now</button>
-        </Link>
-      </div>
+  return (
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route
+          path='/products'
+          element={<ProductsPage products={products} />}
+        />
+        <Route path='/contact' element={<Home />} />
+      </Routes>
     </div>
   )
 }

@@ -21,7 +21,7 @@ code {
 
 .nav-links {
   display: flex;
-  color: white;
+  color: red;
 }
 
 .shop-button {
@@ -57,4 +57,26 @@ code {
   text-decoration: none;
   color: white;
   margin-right: 1rem;
+}
+
+.product-cards-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.product-card {
+  width: 15rem;
+}
+
+.product-card-imgdiv {
+  background-color: rgb(238, 235, 235);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.product-card-photo {
+  max-height: 15rem;
+  padding: 1rem;
 }
