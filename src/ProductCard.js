@@ -9,7 +9,9 @@ const ProductCard = (props) => {
         </div>
         <h4>{props.title}</h4>
         <h5 className='product-card-price'>{props.price}</h5>
-        <button type='button'>Add to Cart</button>
+        <button onClick={() => props.updateCart(props.obj)} type='button'>
+          Add to Cart
+        </button>
       </div>
     </div>
   )
