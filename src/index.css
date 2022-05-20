@@ -99,3 +99,25 @@ code {
 .product-card-price {
   margin-top: -1rem;
 }
+
+.contact-icons-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2.5rem;
+}
+
+.contact-icons {
+  font-size: 3.5rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.contact-icons:hover {
+  transform: scale(1.15);
+}
+
+.contact-text {
+  margin-top: 8rem;
+  text-align: center;
+}

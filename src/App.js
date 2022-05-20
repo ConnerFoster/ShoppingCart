@@ -4,6 +4,7 @@ import Home from './routes/Home'
 import background from './photos/gpu.jpg'
 import {Header} from './components/Header'
 import ProductsPage from './routes/ProductsPage'
+import Contact from './routes/Contact'
 import photo from './photos/rtx-3080.png'
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
           path='/products'
           element={<ProductsPage updateCart={updateCart} products={products} />}
         />
-        <Route path='/contact' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>
   )
