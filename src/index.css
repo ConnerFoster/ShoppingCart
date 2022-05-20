@@ -57,6 +57,7 @@ code {
   text-decoration: none;
   color: white;
   margin-right: 1rem;
+  font-weight: 300;
 }
 
 .product-cards-container {
@@ -67,17 +68,34 @@ code {
 }
 
 .product-card {
-  width: 15rem;
+  width: 18rem;
+  cursor: pointer;
+}
+
+.product-card button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: rgb(41, 41, 41);
 }
 
 .product-card-imgdiv {
-  background-color: rgb(238, 235, 235);
+  background-color: rgb(243, 243, 243);
   display: flex;
   justify-content: center;
-  
+  height: 18rem;
 }
 
 .product-card-photo {
   max-height: 15rem;
   padding: 1rem;
+}
+
+.product-card-price {
+  margin-top: -1rem;
 }

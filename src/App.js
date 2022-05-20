@@ -9,17 +9,17 @@ function App() {
   const products = [
     {
       image: photo,
-      title: 'RTX 3070',
+      title: 'Nvidia GeForce RTX 3070',
       price: '$499',
     },
     {
       image: photo,
-      title: 'RTX 3080',
+      title: 'Nvidia GeForce RTX 3080',
       price: '$699',
     },
     {
       image: photo,
-      title: 'RTX 3090',
+      title: 'Nvidia GeForce RTX 3090',
       price: '$999',
     },
   ]
