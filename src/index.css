@@ -63,6 +63,7 @@ code {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  gap: 3rem;
 }
 
 .product-card {

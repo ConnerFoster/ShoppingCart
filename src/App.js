@@ -8,17 +8,17 @@ import photo from './photos/rtx-3080.png'
 function App() {
   const products = [
     {
-      photo: {photo},
+      image: photo,
       title: 'RTX 3070',
       price: '$499',
     },
     {
-      photo: '../photos/rtx-3080.png',
+      image: photo,
       title: 'RTX 3080',
       price: '$699',
     },
     {
-      photo: './photos/rtx-3080.png',
+      image: photo,
       title: 'RTX 3090',
       price: '$999',
     },
