@@ -1,11 +1,10 @@
-import {Link, Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import {useState} from 'react'
 import Home from './routes/Home'
-import background from './photos/gpu.jpg'
-import {Header} from './components/Header'
 import ProductsPage from './routes/ProductsPage'
 import Contact from './routes/Contact'
 import photo from './photos/rtx-3080.png'
+import Cart from './components/Cart'
 
 function App() {
   const products = [
@@ -45,7 +44,7 @@ function App() {
           flag = true
         }
       })
-      if (flag == false) {
+      if (flag === false) {
         const newObj = {}
         newObj.id = obj.id
         newObj.image = obj.image
@@ -61,6 +60,7 @@ function App() {
 
   return (
     <div>
+      <Cart state={cartState} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
