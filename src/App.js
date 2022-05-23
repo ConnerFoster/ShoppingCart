@@ -29,14 +29,7 @@ function App() {
   ]
 
   const [cartState, setCart] = useState({
-    cart: [
-      {
-        image: photo,
-        title: 'Nvidia GeForce RTX 3070',
-        price: '$499',
-        id: 0,
-      },
-    ],
+    cart: [],
   })
 
   const updateCart = (obj) => {
@@ -65,14 +58,47 @@ function App() {
     })
   }
 
+  const showCart = () => {
+    const cart = document.getElementById('cart-page')
+    cart.style.visibility = 'visible'
+  }
+
+  const incrementCart = (index) => {
+    setCart((prevState) => {
+      let cart = Object.assign([], prevState.cart)
+      cart[index].count += 1
+      return {cart}
+    })
+  }
+
+  //Need to do a find, index and ID will not always be the same
+
+  const decrementCart = (index) => {
+    setCart((prevState) => {
+      let cart = Object.assign([], prevState.cart)
+      cart[index].count -= 1
+      return {cart}
+    })
+  }
+
   return (
     <div>
-      <Cart state={cartState.cart} />
+      <Cart
+        state={cartState.cart}
+        incrementCart={incrementCart}
+        decrementCart={decrementCart}
+      />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
           path='/products'
-          element={<ProductsPage updateCart={updateCart} products={products} />}
+          element={
+            <ProductsPage
+              updateCart={updateCart}
+              products={products}
+              showCart={showCart}
+            />
+          }
         />
         <Route path='/contact' element={<Contact />} />
       </Routes>

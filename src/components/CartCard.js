@@ -10,11 +10,17 @@ const CartCard = (props) => {
         <p>{props.product.title}</p>
         <p>{props.product.price}</p>
         <div className='cart-card-quantity'>
-          <button type='button' className='qty-btns'>
+          <button
+            onClick={() => props.decrementCart(Number(props.product.id))}
+            type='button'
+            className='qty-btns'>
             -
           </button>
-          <p>1</p>
-          <button type='button' className='qty-btns'>
+          <p>{props.product.count}</p>
+          <button
+            onClick={() => props.incrementCart(Number(props.product.id))}
+            type='button'
+            className='qty-btns'>
             +
           </button>
         </div>

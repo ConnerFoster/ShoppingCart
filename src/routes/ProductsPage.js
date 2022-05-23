@@ -17,6 +17,7 @@ const ProductsPage = (props) => {
                 price={product.price}
                 obj={product}
                 updateCart={props.updateCart}
+                showCart={props.showCart}
               />
             </div>
           )
