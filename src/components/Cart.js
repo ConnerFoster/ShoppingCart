@@ -13,7 +13,7 @@ const Cart = (props) => {
         <h2>Shopping Cart</h2>
         <button onClick={() => closeCart()}>X</button>
         <div className='cart-products'>
-          {props.state.map((product, productIndex) => {
+          {props.state?.map((product, productIndex) => {
             return (
               <div key={productIndex}>
                 <CartCard

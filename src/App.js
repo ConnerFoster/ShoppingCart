@@ -63,20 +63,28 @@ function App() {
     cart.style.visibility = 'visible'
   }
 
-  const incrementCart = (index) => {
+  const incrementCart = (id) => {
     setCart((prevState) => {
       let cart = Object.assign([], prevState.cart)
-      cart[index].count += 1
+      const cartObj = cart.find((x) => x.id === id)
+      cartObj.count += 1
       return {cart}
     })
   }
 
-  //Need to do a find, index and ID will not always be the same
-
-  const decrementCart = (index) => {
+  const decrementCart = (id) => {
     setCart((prevState) => {
       let cart = Object.assign([], prevState.cart)
-      cart[index].count -= 1
+      const cartObj = cart.find((x) => x.id === id)
+      const cartObjIndex = cart.findIndex((x) => x.id === id)
+      console.log(cartObjIndex)
+
+      if (cartObj.count > 1) {
+        cartObj.count -= 1
+      } else if (cartObj.count === 1) {
+        cart.splice(cartObjIndex, 1)
+      }
+
       return {cart}
     })
   }
