@@ -29,7 +29,14 @@ function App() {
   ]
 
   const [cartState, setCart] = useState({
-    cart: [],
+    cart: [
+      {
+        image: photo,
+        title: 'Nvidia GeForce RTX 3070',
+        price: '$499',
+        id: 0,
+      },
+    ],
   })
 
   const updateCart = (obj) => {
@@ -60,7 +67,7 @@ function App() {
 
   return (
     <div>
-      <Cart state={cartState} />
+      <Cart state={cartState.cart} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
