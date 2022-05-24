@@ -31,6 +31,7 @@ code {
 
 #shop-btn {
   padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
 }
 
 #shop-btn:hover {
@@ -58,19 +59,20 @@ code {
   color: white;
   margin-right: 1rem;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .product-cards-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  padding: 2rem 4rem 2rem 4rem;
   gap: 3rem;
   flex-wrap: wrap;
 }
 
 .product-card {
   width: 18rem;
-  cursor: pointer;
+  
 }
 
 .product-card button {

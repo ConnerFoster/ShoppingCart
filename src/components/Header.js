@@ -20,9 +20,12 @@ export const Header = (props) => {
         <Link style={{color: props.color}} className='links' to='/contact'>
           Contact
         </Link>
-        <Link style={{color: props.color}} className='links' to='/cart'>
+        <a
+          style={{color: props.color}}
+          className='links'
+          onClick={() => props.showCart()}>
           <CgShoppingCart />
-        </Link>
+        </a>
       </div>
     </div>
   )

@@ -8,10 +8,10 @@ import {
   FaInstagram,
 } from 'react-icons/fa'
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <div>
-      <Header bg='white' color='black' />
+      <Header bg='white' color='black' showCart={props.showCart} />
       <div className='contact-icons-div'>
         <FaFacebookF className='contact-icons' />
         <FaGithub className='contact-icons' />

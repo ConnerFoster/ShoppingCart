@@ -115,7 +115,7 @@ function App() {
         decrementCart={decrementCart}
       />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home showCart={showCart} />} />
         <Route
           path='/products'
           element={
@@ -126,7 +126,7 @@ function App() {
             />
           }
         />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact showCart={showCart} />} />
       </Routes>
     </div>
   )
