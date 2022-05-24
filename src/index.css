@@ -131,16 +131,28 @@ code {
   position: absolute;
   width: 100vw;
   background-color: rgba(0,0,0,0.65);
-  visibility: visible;
+  transition:  0.3s ease-in-out;
 }
 
-.cart-container {
+.hidden {
+  visibility: hidden;
+}
+
+#cart-container {
   position: absolute;
   right: 0;
   height: 100vh;
   width: 25vw;
   background-color: white;
   text-align: center;
+  transition:  0.3s ease-in-out;
+  transform: translateX(75%);
+}
+
+
+#cart-heading {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .cart-card-img {
@@ -179,8 +191,44 @@ code {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  width: 1.4rem;
+}
+
+.qty-btns:hover {
+  background-color: rgb(219, 219, 219);
 }
 
 #close-cart {
   cursor: pointer;
+}
+
+.cart-buttons {
+  width: 75%;
+  padding: 6px;
+  margin-bottom: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.15s ease-in-out;
+}
+
+#close-btn {
+  border: 1px solid rgb(255, 131, 131);
+  color: rgb(255, 131, 131);
+  
+}
+#close-btn:hover {
+  background-color: rgb(255, 131, 131);
+  color: white;
+}
+
+#checkout-btn {
+  border: 1px solid gray;
+  color: gray;
+}
+
+#checkout-btn:hover {
+  background-color: rgb(160, 160, 160);
+  color: white;
 }

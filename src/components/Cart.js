@@ -4,14 +4,17 @@ import CartCard from './CartCard'
 const Cart = (props) => {
   const closeCart = () => {
     const cart = document.getElementById('cart-page')
+    const cartDiv = document.getElementById('cart-container')
+    cartDiv.style.transform = 'translateX(95%)'
+
     cart.style.visibility = 'hidden'
   }
 
   return (
     <div id='cart-page'>
-      <div className='cart-container'>
-        <h2>Shopping Cart</h2>
-        <button onClick={() => closeCart()}>X</button>
+      <div id='cart-container'>
+        <h2 id='cart-heading'>Shopping Cart</h2>
+
         <div className='cart-products'>
           {props.state?.map((product, productIndex) => {
             return (
@@ -25,6 +28,15 @@ const Cart = (props) => {
             )
           })}
         </div>
+        <button
+          className='cart-buttons'
+          id='close-btn'
+          onClick={() => closeCart()}>
+          Close
+        </button>
+        <button className='cart-buttons' id='checkout-btn'>
+          Checkout
+        </button>
       </div>
     </div>
   )

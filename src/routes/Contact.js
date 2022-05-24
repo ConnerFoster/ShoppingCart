@@ -14,7 +14,12 @@ const Contact = (props) => {
       <Header bg='white' color='black' showCart={props.showCart} />
       <div className='contact-icons-div'>
         <FaFacebookF className='contact-icons' />
-        <FaGithub className='contact-icons' />
+        <a
+          style={{color: 'black'}}
+          href='https://www.github.com/ConnerFoster'
+          target={'_blank'}>
+          <FaGithub className='contact-icons' />
+        </a>
         <FaFacebookMessenger className='contact-icons' />
         <FaTwitter className='contact-icons' />
         <FaInstagram className='contact-icons' />

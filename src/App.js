@@ -78,7 +78,9 @@ function App() {
 
   const showCart = () => {
     const cart = document.getElementById('cart-page')
+    const cartDiv = document.getElementById('cart-container')
     cart.style.visibility = 'visible'
+    cartDiv.style.transform = 'translateX(0)'
   }
 
   const incrementCart = (id) => {
