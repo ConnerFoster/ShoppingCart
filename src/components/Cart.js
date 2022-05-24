@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useEffect, useRef} from 'react'
 import CartCard from './CartCard'
 
 const Cart = (props) => {
@@ -6,13 +6,27 @@ const Cart = (props) => {
     const cart = document.getElementById('cart-page')
     const cartDiv = document.getElementById('cart-container')
     cartDiv.style.transform = 'translateX(95%)'
-
     cart.style.visibility = 'hidden'
   }
 
+  const outsideRef = useRef(null)
+
+  const handleClick = (e) => {
+    if (outsideRef.current && !outsideRef.current.contains(e.target)) {
+      closeCart()
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClick, true)
+    return () => {
+      document.removeEventListener('click', handleClick, true)
+    }
+  })
+
   return (
     <div id='cart-page'>
-      <div id='cart-container'>
+      <div ref={outsideRef} id='cart-container'>
         <h2 id='cart-heading'>Shopping Cart</h2>
 
         <div className='cart-products'>

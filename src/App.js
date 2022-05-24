@@ -135,3 +135,6 @@ function App() {
 }
 
 export default App
+
+//Things to Do:
+//Close cart when user clicks away from it
