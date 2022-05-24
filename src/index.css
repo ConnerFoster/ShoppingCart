@@ -65,6 +65,7 @@ code {
   justify-content: center;
   margin-top: 2rem;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .product-card {
@@ -135,31 +136,35 @@ code {
   position: absolute;
   right: 0;
   height: 100vh;
-  width: 20vw;
+  width: 25vw;
   background-color: white;
   text-align: center;
 }
 
 .cart-card-img {
-  width: 4rem;
-  height: 8rem;
+  max-width: 80%;
+  max-height: 80%;
   padding: 4px 8px 4px 8px;
 }
 
 .cart-card-img-container {
   background-color: rgb(238, 238, 238);
-  width: 11rem;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 128px;
 }
 
 .cart-card {
   display: flex;
-  gap: 2rem;
-  margin: 2rem;
+  gap: 2.5rem;
+  margin: 2.5rem;
 }
 
 .cart-card-main {
   font-size: 0.75rem;
+  flex-grow: 1;
 }
 
 .cart-card-quantity {

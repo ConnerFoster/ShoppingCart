@@ -3,28 +3,46 @@ import {useState} from 'react'
 import Home from './routes/Home'
 import ProductsPage from './routes/ProductsPage'
 import Contact from './routes/Contact'
-import photo from './photos/rtx-3080.png'
+import {RTX3080, RTX3070, RTX3090, MB1, MB2, MB3} from './photos/photos'
 import Cart from './components/Cart'
 
 function App() {
   const products = [
     {
-      image: photo,
+      image: RTX3070,
       title: 'Nvidia GeForce RTX 3070',
       price: '$499',
       id: 0,
     },
     {
-      image: photo,
+      image: RTX3080,
       title: 'Nvidia GeForce RTX 3080',
       price: '$699',
       id: 1,
     },
     {
-      image: photo,
+      image: RTX3090,
       title: 'Nvidia GeForce RTX 3090',
       price: '$999',
       id: 2,
+    },
+    {
+      image: MB1,
+      title: 'Asus ROG Strix B450-F Gaming',
+      price: '$199',
+      id: 3,
+    },
+    {
+      image: MB2,
+      title: 'Asus TUF Gaming X570-Plus',
+      price: '$179',
+      id: 4,
+    },
+    {
+      image: MB3,
+      title: 'MSI B450 Tomahawk MAX',
+      price: '$169',
+      id: 5,
     },
   ]
 
