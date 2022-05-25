@@ -143,10 +143,6 @@ code {
   visibility: hidden;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 #cart-container {
   position: absolute;
   right: 0;
