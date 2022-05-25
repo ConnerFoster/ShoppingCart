@@ -49,7 +49,7 @@ const Cart = (props) => {
           onClick={() => closeCart()}>
           Close
         </button>
-        <button className='cart-buttons' id='checkout-btn'>
+        <button type='button' className='cart-buttons' id='checkout-btn'>
           Checkout
         </button>
       </div>

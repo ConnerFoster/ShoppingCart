@@ -181,7 +181,7 @@ code {
 .cart-card-img {
   max-width: 80%;
   max-height: 80%;
-  padding: 4px 8px 4px 8px;
+  
 }
 
 .cart-card-img-container {
@@ -189,7 +189,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 7rem;
   height: 12vh;
   margin-top: 1rem;
 }
@@ -272,6 +272,12 @@ code {
 
   #cart-heading {
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #cart-container {
+    width: 50%;
   }
 }
 

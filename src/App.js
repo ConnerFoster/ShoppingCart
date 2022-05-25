@@ -63,7 +63,6 @@ function App() {
       cart.forEach((element) => {
         if (element.id === obj.id) {
           const cartObj = cart.find((x) => x.id === element.id)
-          console.log('true')
           cartObj.count++
           flag = true
         }
@@ -108,7 +107,6 @@ function App() {
       const cartObj = cart.find((x) => x.id === id)
       totalPrice -= cartObj.price
       const cartObjIndex = cart.findIndex((x) => x.id === id)
-      console.log(cartObjIndex)
 
       if (cartObj.count > 1) {
         cartObj.count -= 1
