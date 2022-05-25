@@ -16,7 +16,7 @@ const Home = (props) => {
         width: '100vw',
       }}
       className='App'>
-      <Header showCart={props.showCart} />
+      <Header showCart={props.showCart} total={props.total} />
 
       <div className='shop-button'>
         <h1 id='home-main-text'>Nvidia GeForce RTX 3090 Ti</h1>

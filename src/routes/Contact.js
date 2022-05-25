@@ -11,7 +11,12 @@ import {
 const Contact = (props) => {
   return (
     <div>
-      <Header bg='white' color='black' showCart={props.showCart} />
+      <Header
+        bg='white'
+        color='black'
+        showCart={props.showCart}
+        total={props.total}
+      />
       <div className='contact-icons-div'>
         <FaFacebookF className='contact-icons' />
         <a

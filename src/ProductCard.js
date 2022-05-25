@@ -8,7 +8,7 @@ const ProductCard = (props) => {
           <img className='product-card-photo' src={props.image} alt='product' />
         </div>
         <h4>{props.title}</h4>
-        <h5 className='product-card-price'>{props.price}</h5>
+        <h5 className='product-card-price'>${props.price}</h5>
         <button
           onClick={() => {
             props.updateCart(props.obj)

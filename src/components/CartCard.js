@@ -8,7 +8,7 @@ const CartCard = (props) => {
       </div>
       <div className='cart-card-main'>
         <p>{props.product.title}</p>
-        <p>{props.product.price}</p>
+        <p>${props.product.price}</p>
         <div className='cart-card-quantity'>
           <button
             onClick={() => props.decrementCart(Number(props.product.id))}

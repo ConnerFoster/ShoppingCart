@@ -42,6 +42,7 @@ const Cart = (props) => {
             )
           })}
         </div>
+        <h3>Total: ${props.totalPrice}</h3>
         <button
           className='cart-buttons'
           id='close-btn'

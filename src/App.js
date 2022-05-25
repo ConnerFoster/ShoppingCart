@@ -11,44 +11,44 @@ function App() {
     {
       image: RTX3070,
       title: 'Nvidia GeForce RTX 3070',
-      price: '$499',
+      price: 499,
       id: 0,
     },
     {
       image: RTX3080,
       title: 'Nvidia GeForce RTX 3080',
-      price: '$699',
+      price: 699,
       id: 1,
     },
     {
       image: RTX3090,
       title: 'Nvidia GeForce RTX 3090',
-      price: '$999',
+      price: 999,
       id: 2,
     },
     {
       image: MB1,
       title: 'Asus ROG Strix B450-F Gaming',
-      price: '$199',
+      price: 199,
       id: 3,
     },
     {
       image: MB2,
       title: 'Asus TUF Gaming X570-Plus',
-      price: '$179',
+      price: 179,
       id: 4,
     },
     {
       image: MB3,
       title: 'MSI B450 Tomahawk MAX',
-      price: '$169',
+      price: 169,
       id: 5,
     },
   ]
 
   const [cartState, setCart] = useState({
     cart: [],
-    total: 0,
+    totalPrice: 0,
   })
 
   const [cartTotal, setTotal] = useState(0)
@@ -56,6 +56,9 @@ function App() {
   const updateCart = (obj) => {
     setCart((prevState) => {
       let cart = Object.assign([], prevState.cart)
+      let totalPrice = prevState.totalPrice
+      totalPrice += obj.price
+
       let flag = false
       cart.forEach((element) => {
         if (element.id === obj.id) {
@@ -75,7 +78,7 @@ function App() {
         cart.push(newObj)
       }
       setTotal(cartTotal + 1)
-      return {cart}
+      return {cart, totalPrice}
     })
   }
 
@@ -89,9 +92,11 @@ function App() {
   const incrementCart = (id) => {
     setCart((prevState) => {
       let cart = Object.assign([], prevState.cart)
+      let totalPrice = prevState.totalPrice
       const cartObj = cart.find((x) => x.id === id)
       cartObj.count += 1
-      return {cart}
+      totalPrice += cartObj.price
+      return {cart, totalPrice}
     })
     setTotal(cartTotal + 1)
   }
@@ -99,7 +104,9 @@ function App() {
   const decrementCart = (id) => {
     setCart((prevState) => {
       let cart = Object.assign([], prevState.cart)
+      let totalPrice = prevState.totalPrice
       const cartObj = cart.find((x) => x.id === id)
+      totalPrice -= cartObj.price
       const cartObjIndex = cart.findIndex((x) => x.id === id)
       console.log(cartObjIndex)
 
@@ -109,7 +116,7 @@ function App() {
         cart.splice(cartObjIndex, 1)
       }
 
-      return {cart}
+      return {cart, totalPrice}
     })
     setTotal(cartTotal - 1)
   }
@@ -120,9 +127,13 @@ function App() {
         state={cartState.cart}
         incrementCart={incrementCart}
         decrementCart={decrementCart}
+        totalPrice={cartState.totalPrice}
       />
       <Routes>
-        <Route path='/' element={<Home showCart={showCart} />} />
+        <Route
+          path='/'
+          element={<Home showCart={showCart} total={cartTotal} />}
+        />
         <Route
           path='/products'
           element={
@@ -134,7 +145,10 @@ function App() {
             />
           }
         />
-        <Route path='/contact' element={<Contact showCart={showCart} />} />
+        <Route
+          path='/contact'
+          element={<Contact showCart={showCart} total={cartTotal} />}
+        />
       </Routes>
     </div>
   )
