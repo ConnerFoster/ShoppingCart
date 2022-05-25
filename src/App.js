@@ -48,7 +48,10 @@ function App() {
 
   const [cartState, setCart] = useState({
     cart: [],
+    total: 0,
   })
+
+  const [cartTotal, setTotal] = useState(0)
 
   const updateCart = (obj) => {
     setCart((prevState) => {
@@ -90,6 +93,7 @@ function App() {
       cartObj.count += 1
       return {cart}
     })
+    setTotal(cartTotal + 1)
   }
 
   const decrementCart = (id) => {
@@ -107,6 +111,7 @@ function App() {
 
       return {cart}
     })
+    setTotal(cartTotal - 1)
   }
 
   return (
