@@ -22,7 +22,12 @@ code {
 
 .nav-links {
   display: flex;
-  color: red;
+}
+
+#header-count {
+  color: black;
+  font-size: 10px;
+  margin-left: -1rem;
 }
 
 .shop-button {
@@ -278,5 +283,11 @@ code {
   .cart-card-img-container {
     width: 128px;
     height: 128px;
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

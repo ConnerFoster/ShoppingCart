@@ -5,7 +5,12 @@ import ProductCard from '../ProductCard'
 const ProductsPage = (props) => {
   return (
     <div>
-      <Header bg='white' color='black' showCart={props.showCart} />
+      <Header
+        bg='white'
+        color='black'
+        showCart={props.showCart}
+        total={props.total}
+      />
       <div className='product-cards-container'>
         {props.products.map((product, productIndex) => {
           return (

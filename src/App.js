@@ -74,7 +74,7 @@ function App() {
         newObj.count = 1
         cart.push(newObj)
       }
-      console.log(cart)
+      setTotal(cartTotal + 1)
       return {cart}
     })
   }
@@ -130,6 +130,7 @@ function App() {
               updateCart={updateCart}
               products={products}
               showCart={showCart}
+              total={cartTotal}
             />
           }
         />

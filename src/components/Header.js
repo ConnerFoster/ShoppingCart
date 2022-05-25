@@ -26,6 +26,7 @@ export const Header = (props) => {
           onClick={() => props.showCart()}>
           <CgShoppingCart />
         </a>
+        <p id='header-count'>{props.total}</p>
       </div>
     </div>
   )
